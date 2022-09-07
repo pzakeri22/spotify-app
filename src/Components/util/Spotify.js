@@ -1,6 +1,6 @@
 let accessToken;
 const client_id = 'a038457604634aac9a912fff8748b31d';
-const redirect_uri = 'https://pzakeri22.github.io/spotify-app';  //  'http://localhost:3000'  ; //-previously had this here and under app settings on spotify developer site
+const redirect_uri = 'http://localhost:3000';  //  'https://pzakeri22.github.io/spotify-app'   ; //-previously had this here and under app settings on spotify developer site
 
 const Spotify = {
     //obtains a users access token so  they can make requests to the Spotify API. 

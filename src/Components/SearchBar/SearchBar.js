@@ -22,7 +22,6 @@ class SearchBar extends React.Component {
 
     handleKeyPress(e) {
         if(e.key === 'Enter') {
-            console.log(123);
             this.search(); 
         }
     }
@@ -33,6 +32,10 @@ class SearchBar extends React.Component {
     }
 
     search() {  
+        if (this.state.searchTerm === "") {
+            console.log(123);
+            return;
+        }
         this.props.onSearch(this.state.searchTerm);
     }
 }

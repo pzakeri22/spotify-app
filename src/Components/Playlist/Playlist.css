@@ -1,3 +1,5 @@
+/* * {outline: 1px solid red;} */
+
 .Playlist {
     display: flex;
     flex-direction: column;
@@ -14,45 +16,81 @@
     width: 98%;  
     border: 0;
     outline: 0;
-    background-color:rgba(241, 233, 248, 0.639);
     /* background: transparent; */
     /* border-bottom: 2px dashed grey; */
-    font-family: calibri, sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.4em;
     line-height: 2.0rem;
     padding-top: 0.2rem;
-    color: black;
+    color:rgb(71, 1, 132);
     margin: 0 0 0.8rem 0;
     background-image: url('../../../public/imageBank/pen.png');
     background-repeat:no-repeat;
     background-position: right;
-    text-indent: 5px;
+    text-indent: 9px;
     border-radius: 5px;
   }
 
   .Playlist input::placeholder {
-    color:rgb(71, 1, 132);
+    color: rgb(99, 99, 99);
+  }
+
+  .Playlist .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px; 
   }
   
   .Playlist-save {
     cursor: pointer;
-    width: 10rem;
-    padding: .77rem 0;
+    padding: 0.8rem 1rem;
     border-radius: 54px;
     border-width: 0px;
-    margin-top: 1.27rem;
-    background-color: #6c41ec;
+    /* margin-top: 1.27rem; */
     text-align: center;
     font-size: .83rem;
     transition: background-color .25s;
     color: #fff;
     font-weight: 500;
+    background-color: #9941ec;
+
   }
   
   .Playlist-save:hover {
-    background-color: rgba(108, 65, 233, .7);
+    background-color: #7711d6;
   }
+
+  .Playlist a {
+    padding: 0.8rem 1rem; 
+    border-radius: 50px; 
+    background-color: #6952ff;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    font-size: .83rem;
+    /* font-weight: 600; */
+    transition: all .25s;
+    color: white;
+  }
+
+  .Playlist a:hover {
+    background-color: #5a42fa;
+  }
+
+  .Playlist a img {
+    height: .9rem;
+    margin-left: 0.7rem;
+    filter:invert(1);
+    /* vertical-align: middle; */
+    /* margin-bottom: .2rem; */
+  }
+
+
+
   
   /* width */
   ::-webkit-scrollbar {

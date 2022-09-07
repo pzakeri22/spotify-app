@@ -15,7 +15,14 @@ class Playlist extends React.Component {
                 <Tracklist tracks={this.props.playlistTracks}
                             onRemove={this.props.onRemove}
                             isRemoval={true}/>
-                <button className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</button>
+                <div className="buttons">
+                    <button className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</button>
+                    <a 
+                        href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">
+                        VIEW PLAYLISTS ON WEB<img src={require("../../images/resize.png")} alt=""/>
+                        
+                    </a>
+                </div>
             </div>
         );
     }

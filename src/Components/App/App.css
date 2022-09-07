@@ -106,3 +106,7 @@ body::-webkit-scrollbar-thumb {
 background-color: darkgrey;
 outline: 1px solid slategrey;
 }
+
+button {
+  letter-spacing: 1px; 
+}
