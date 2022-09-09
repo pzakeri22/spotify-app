@@ -1,7 +1,7 @@
 .Track {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(84, 84, 84);
     /* justify-items:center; 
     align-content:center; */
   }

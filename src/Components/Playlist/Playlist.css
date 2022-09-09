@@ -6,33 +6,39 @@
     align-items: center;
     overflow-y: scroll;
     width: 45%;
-    max-height: 950px;
+    height: 850px;
     padding: 2.27rem 1.16rem;
     background-color: rgba(1, 12, 63, 0.7);
     box-shadow: 0 4px 2px 2px #000000;
   }
+
+  .Playlist form {
+    width: 100%; 
+  }
   
-  .Playlist input {
+  .Playlist #playlist-name { 
     width: 98%;  
     border: 0;
     outline: 0;
-    /* background: transparent; */
-    /* border-bottom: 2px dashed grey; */
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.3em;
     line-height: 2.0rem;
     padding-top: 0.2rem;
-    color:rgb(71, 1, 132);
+    color:rgb(1, 16, 85);
     margin: 0 0 0.8rem 0;
-    background-image: url('../../../public/imageBank/pen.png');
+    background-image: url('../../images/pen.png');
     background-repeat:no-repeat;
     background-position: right;
     text-indent: 9px;
     border-radius: 5px;
   }
 
-  .Playlist input::placeholder {
+  .Playlist #playlist-name::placeholder {
     color: rgb(99, 99, 99);
+  }
+
+  .Playlist .instructions {
+    padding: 2rem 0 1rem 0;    
   }
 
   .Playlist .buttons {
@@ -43,26 +49,25 @@
     row-gap: 1rem;
     margin-top: 2rem;
     width: 100%;
-    max-width: 600px; 
   }
   
-  .Playlist-save {
-    cursor: pointer;
+  .Playlist-save {    
     padding: 0.8rem 1rem;
     border-radius: 54px;
     border-width: 0px;
-    /* margin-top: 1.27rem; */
     text-align: center;
     font-size: .83rem;
     transition: background-color .25s;
-    color: #fff;
+    /* color: #fff; */
+    color: rgb(59, 59, 59);
     font-weight: 500;
-    background-color: #9941ec;
-
+    /* background-color: #9941ec; */
+    background-color: rgb(174, 174, 174);
+    cursor: not-allowed;
   }
   
   .Playlist-save:hover {
-    background-color: #7711d6;
+    /* background-color: #7711d6; */
   }
 
   .Playlist a {
@@ -78,7 +83,7 @@
   }
 
   .Playlist a:hover {
-    background-color: #5a42fa;
+    background-color: #5640e7;
   }
 
   .Playlist a img {
@@ -121,6 +126,3 @@
     width: 90%;
   }
 }
-
-/* font-family: 'Coming Soon', cursive;
-font-family: 'Sriracha', cursive; */

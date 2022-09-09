@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import SearchResults from './../SearchResults/SearchResults.js'
-import Playlist from './../Playlist/Playlist.js'
-import SearchBar from './../SearchBar/SearchBar.js';
-import Spotify from './../util/Spotify.js';
+import SearchResults from './Components/SearchResults/SearchResults.js'
+import Playlist from './Components/Playlist/Playlist.js'
+import SearchBar from './Components/SearchBar/SearchBar.js';
+import Spotify from './Components/util/Spotify.js';
 
 class App extends React.Component {     
 
@@ -65,10 +65,14 @@ class App extends React.Component {
   }
 
   savePlaylist() {
-    const trackURIs = this.state.playlistTracks.map(track => track.uri); 
-    Spotify.savePlaylist(this.state.playlistName, trackURIs);
-    this.setState({playlistName : 'New Playlist'});
-    this.setState({playlistTracks : []})
+    // const saveButton = document.getElementsByClassName("Playlist-save")[0];
+    // saveButton.value = "SAVED!"
+      const trackURIs = this.state.playlistTracks.map(track => track.uri); 
+      Spotify.savePlaylist(this.state.playlistName, trackURIs);
+      this.setState({playlistName : ''});
+      this.setState({playlistTracks : []})
+      const playlistName = document.getElementById("playlist-name");
+      playlistName.placeholder="Playlist Name";
   }
 
   search(searchParameter) {
