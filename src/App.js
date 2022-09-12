@@ -65,8 +65,10 @@ class App extends React.Component {
   }
 
   savePlaylist() {
-    // const saveButton = document.getElementsByClassName("Playlist-save")[0];
-    // saveButton.value = "SAVED!"
+      // const saveButton = document.getElementsByClassName("saveButton")[0];
+      // console.log(saveButton);
+      // saveButton.value = "SAVED!"
+      // console.log(saveButton.value);
       const trackURIs = this.state.playlistTracks.map(track => track.uri); 
       Spotify.savePlaylist(this.state.playlistName, trackURIs);
       this.setState({playlistName : ''});
