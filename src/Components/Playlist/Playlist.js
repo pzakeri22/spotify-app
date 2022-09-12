@@ -5,6 +5,9 @@ import './Playlist.css';
 class Playlist extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            saved: false
+        };
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
     }
@@ -34,8 +37,8 @@ class Playlist extends React.Component {
                     <div className="buttons">
                         <input 
                             type="submit" 
-                            value="SAVE TO SPOTIFY" 
-                            className={`saveButton disabled-${saveDisabled}`}
+                            value={this.state.saved? "SAVED ✔" : "SAVE TO SPOTIFY"} 
+                            className={`saveButton disabled-${saveDisabled} saved-${this.state.saved}`}
                             disabled={saveDisabled} 
                             onClick={this.handleSave}
                         />
@@ -60,7 +63,14 @@ class Playlist extends React.Component {
     handleSave() {
         const inputname = document.getElementById("playlist-name");
         if (inputname.value === "") return;
+        setTimeout(() => {
+            this.setState({saved: true})
+        }, 1)
+        setTimeout(() => {
+            this.setState({saved: false})
+        }, 2000)
         this.props.onSave();
+
     }
 
     handleNameChange(e) {

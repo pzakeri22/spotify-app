@@ -34,6 +34,9 @@
   }
 
   .Playlist #playlist-name::placeholder {
+    background-color: rgb(46, 154, 94);
+    background-color: white;
+
     color: rgb(99, 99, 99);
   }
 
@@ -63,9 +66,10 @@
     font-size: .83rem;
     transition: background-color .25s;
     font-weight: 500;
+    transition: all 0.2s ease-in;
   }
 
-  .Playlist .saveButton.disabled-true{    
+  .Playlist .saveButton.disabled-true {    
     color: rgb(59, 59, 59);
     background-color: rgb(174, 174, 174);
     cursor: not-allowed;
@@ -79,6 +83,12 @@
 
   .Playlist .saveButton.disabled-false:hover {    
     background-color: #7711d6;
+  }
+
+  .Playlist .saveButton.saved-true {    
+    color: white;
+    background-color: rgb(46, 154, 94);
+    cursor: not-allowed;
   }
 
   .Playlist a {

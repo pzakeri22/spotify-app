@@ -2,8 +2,6 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgb(84, 84, 84);
-    /* justify-items:center; 
-    align-content:center; */
   }
   
   .Track-action {
@@ -30,7 +28,6 @@
     gap: 0rem; 
     margin: 0.7rem 0 0.7rem 0;
     width:max-content;
-    
   }
   
   .Track-information h3 {
@@ -40,11 +37,9 @@
   
   .Track-information p {
     font-size: .83rem;
-    /* font-size: 1rem; */
     font-weight: 300;
     color: rgba(256, 256, 256, 0.8);
     margin: 0.2rem; 
-    
   }
   
 

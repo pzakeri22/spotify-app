@@ -31,7 +31,7 @@ class App extends React.Component {
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
             <Playlist 
               playlistName={this.state.playlistName}
-              playlistTracks={this.state.playlistTracks} //here
+              playlistTracks={this.state.playlistTracks}
               onRemove={this.removeTrack}
               onNameChange={this.updatePlaylistName}
               onSave={this.savePlaylist}/>
@@ -65,10 +65,6 @@ class App extends React.Component {
   }
 
   savePlaylist() {
-      // const saveButton = document.getElementsByClassName("saveButton")[0];
-      // console.log(saveButton);
-      // saveButton.value = "SAVED!"
-      // console.log(saveButton.value);
       const trackURIs = this.state.playlistTracks.map(track => track.uri); 
       Spotify.savePlaylist(this.state.playlistName, trackURIs);
       this.setState({playlistName : ''});

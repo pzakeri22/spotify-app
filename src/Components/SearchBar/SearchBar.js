@@ -8,7 +8,6 @@ class SearchBar extends React.Component {
         this.search = this.search.bind(this);
         this.handleTermChange = this.handleTermChange.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
-
     }
 
     render() {
@@ -33,7 +32,6 @@ class SearchBar extends React.Component {
 
     search() {  
         if (this.state.searchTerm === "") {
-            console.log(123);
             return;
         }
         this.props.onSearch(this.state.searchTerm);

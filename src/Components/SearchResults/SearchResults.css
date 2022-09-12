@@ -10,15 +10,7 @@
   .SearchResults h2 {
     margin: 0 0 1rem 0.5rem; 
     text-align: left; 
-    /* border-bottom: 1px solid #6f6f6f;
-    text-align: left;  */
     border-bottom: 1px solid grey;
-  }
-  
-  ::-webkit-scrollbar {
-      /* width: 0px;
-      background: transparent; */
-      /* background-color: black;  */
   }
   
   @media only screen and (max-width: 1020px) {
