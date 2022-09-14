@@ -68,7 +68,7 @@ class Playlist extends React.Component {
         }, 1)
         setTimeout(() => {
             this.setState({saved: false})
-        }, 2000)
+        }, 3000)
         this.props.onSave();
 
     }

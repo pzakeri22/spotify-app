@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -70,7 +71,7 @@ h2 {
   height: 100%;
   padding: 0 17% 10% 17%;
   padding: 0 10% 10% 10%;
-  background-image: url('./background_photo_desktop.jpg');
+  background-image: url('./images/background_photo_desktop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,3 +112,4 @@ outline: 1px solid slategrey;
 button {
   letter-spacing: 1px; 
 }
+

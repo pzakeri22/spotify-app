@@ -26,7 +26,6 @@
     padding-top: 0.2rem;
     color:rgb(1, 16, 85);
     margin: 0 0 0.8rem 0;
-    background-image: url('../../images/pen.png');
     background-repeat:no-repeat;
     background-position: right;
     text-indent: 9px;
@@ -34,11 +33,15 @@
   }
 
   .Playlist #playlist-name::placeholder {
-    background-color: rgb(46, 154, 94);
     background-color: white;
-
     color: rgb(99, 99, 99);
+    margin-right: 2rem;
   }
+
+  .Playlist #playlist-name:placeholder-shown {
+    background-image: url('../../images/pen.png');
+  }
+
 
   .Playlist .instructions {
     padding: 2rem 0 1rem 0;    

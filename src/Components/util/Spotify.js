@@ -1,9 +1,10 @@
-let accessToken;
-const client_id = 'a038457604634aac9a912fff8748b31d';
-const redirect_uri = 'https://pzakeri22.github.io/spotify-app';  //  'http://localhost:3000'   //-stored here and under app settings on spotify developer site
+export let accessToken;
+export const client_id = 'a038457604634aac9a912fff8748b31d';
+export const redirect_uri = 'http://localhost:3000/home';  //  'https://pzakeri22.github.io/spotify-app'    // stored here and under app settings on spotify developer site
+export const authorise = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirect_uri}&show_dialog=true`;
 
 const Spotify = {
-    //obtains a users access token so  they can make requests to the Spotify API. 
+    //obtains access token so user can make requests to the Spotify API. 
     //If no access token, will attempt authorization (granting user/application permissions to spotify data) which generates access token.
     getAccessToken() {
       if (accessToken) {
@@ -14,11 +15,10 @@ const Spotify = {
       const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);   
       const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
       if(accessTokenMatch && expiresInMatch) {
-          //the below ensures you set the access token as the token's value itself, because accessTokenMatch will return an array in the format of ["access_token = abc", "abc"]
           accessToken = accessTokenMatch[1];
-          const expiresIn = Number(expiresInMatch[1]);
-          //the below clears the paramaters, allowing us to grab a new access token when it expires.
-          window.setTimeout(() => accessToken ="", expiresIn *1000);
+          // const expiresIn = Number(expiresInMatch[1]);
+          // the below clears the access token, allowing us to grab a new one when it expires.
+          window.setTimeout(() => accessToken ="", 900000);
           //1- To modify current URL and add / inject it (the new modified URL) as a new URL entry to history list, use pushState:
           // This adds (pushes) a new "state" onto the browser history, so that in future, the user will be able to return to this state that the web-page is now in.
           //For example, if a user does a search "CATS" in one of your search boxes, and the results of the search (pictures of cats) are loaded back via AJAX, -- then your page state will not be changed. 
@@ -26,14 +26,13 @@ const Spotify = {
           //He will only be able to click back to your blank search box.
           //history.pushState({},"Results for `Cats`",'url.html?s=cats');
           //When the function is working properly, the only thing you should expect to see, is the address in your browser's address-bar change to whatever you specify in your URL.
-          window.history.pushState('Access Token', null, '/');
-          //if there is an access token youve just obtained from the url, return it. (This will happen before it expires as setTimeout is asynchronous)
+          window.history.pushState('Access Token', null, '/home');
           return accessToken;
       }
-        //the below takes you to the page where you need to authorise, which gives you the access token.The scope "playlist-modify-public" allows us to create & add to a user's playlists.
-          const accessUrl = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirect_uri}`;
-          window.location = accessUrl;
-    },
+          // const accessURL = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirect_uri}&show_dialog=true`;
+          //the below redirects you to the homepage with instructions and a link to authorise.
+          window.location = '../'; 
+        },
 
     async search(searchTerm) {
         const accessToken = Spotify.getAccessToken();    
@@ -42,9 +41,8 @@ const Spotify = {
         }
         try {
           const response = await fetch(`https://api.spotify.com/v1/search?type=track&q=${searchTerm}`, headers);
-          if (response.ok) {  
+          if (response.ok) {
             const jsonResponse = await response.json();
-
             if (!jsonResponse.tracks) {
                 return []; 
             } else {
@@ -62,7 +60,7 @@ const Spotify = {
         } catch (error) { 
           console.log(error); 
         }
-    },
+      },
 
     savePlaylist(playlistName, trackURIs) {
       if (!playlistName || !trackURIs) {

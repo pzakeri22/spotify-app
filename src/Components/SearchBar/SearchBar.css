@@ -1,9 +1,11 @@
+
 .SearchBar {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 5rem;
     margin-bottom: 3rem; 
+    /* height: 192px; */
   }
   
   .SearchBar input {
@@ -38,3 +40,24 @@
   .SearchButton:hover {
     background-color: rgba(108, 65, 233, .7);
   }
+
+  .warning {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.614);
+    outline: 1px solid rgb(230, 20, 20);
+    top: 115px; 
+  }
+
+  .warning > p {
+    margin: 0.4rem;
+    color: rgb(230, 20, 20);
+  }
+
+  .warning.visible-false {
+    display: none;
+  }
+
+  .warning.visible-true {
+    display: block;
+  }
+

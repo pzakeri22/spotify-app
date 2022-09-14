@@ -1,0 +1,36 @@
+
+.login-error {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.error {
+    background-color: rgba(0, 0, 0, 0.614);
+    outline: 2px solid rgb(230, 20, 20);
+    padding: 0rem 0.5rem; 
+    width: 90%;
+    width: fit-content;
+  }
+
+  .error > p {
+    color: rgb(196, 65, 65);
+  }
+
+  .login-error button {
+    display: block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: none;
+    width: fit-content;
+    background-color: purple;
+    color: white;
+  }
+
+  .login-error button:hover {
+    background-color: rgb(144, 50, 144);
+    cursor: pointer;
+  }
