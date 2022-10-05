@@ -39,7 +39,6 @@ class SearchBar extends React.Component {
             }, 5000)
             return;
         }
-        this.setState({invalidTerm : false});
         this.setState({searchTerm : searchTerm});
     }
 
