@@ -27,7 +27,7 @@ class Login extends React.Component {
                   <br/>Password :
                   <br/>developer101
                 </p>
-                <p>If prompted, you must log out of your current Spotify account first;</p>
+                <p>On the next page, if prompted, you must log out of your current Spotify account first;</p>
                 <img className="login-example"src={require("../../images/log-in.png")} alt="example"></img>
             </div>
             <a 
