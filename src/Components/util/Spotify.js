@@ -1,8 +1,8 @@
 export let accessToken;
 export const client_id = 'a038457604634aac9a912fff8748b31d';
-export const redirect_uri = 'https://pzakeri22.github.io/spotify-app/home'; 
-//  'http://localhost:3000/home'; stored here and under app settings on spotify developer site
-//  'https://pzakeri22.github.io/spotify-app/home'; 
+export const redirect_uri = 'http://localhost:3000/home';  //stored here and under app settings on spotify developer site
+// export const redirect_uri = 'https://pzakeri22.github.io/spotify-app/home';  //stored here and under app settings on spotify developer site
+
 export const authorise = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirect_uri}&show_dialog=true`;
 
 const Spotify = {
