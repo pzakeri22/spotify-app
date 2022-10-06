@@ -10,8 +10,10 @@ class App extends React.Component {
       <BrowserRouter>
         <Routes>
            {/* <Login/> */}
-          <Route path="/" element={<Login/>}/>
-          <Route path="/home" element={<Home/>}/>
+           {/* <Route path="/" element={<Login/>}/> */}
+          <Route path="/spotify-app" element={<Login/>}/>
+          {/* <Route path="/home" element={<Home/>}/> */}
+          <Route path="/spotify-app/home" element={<Home/>}/>
         </Routes>
       </BrowserRouter>
     );  
