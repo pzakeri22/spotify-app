@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import Login from './Components/LoginRoute/Login';
 import Home from "./Home";
 import HomepageTest from './HomepageTest';
@@ -7,7 +7,8 @@ import HomepageTest from './HomepageTest';
 class App extends React.Component {     
   render() {
     return (
-      <BrowserRouter>
+      // <BrowserRouter>
+      <HashRouter>
         <Routes>
            {/* <Login/> */}
            {/* <Route path="/" element={<Login/>}/> */}
@@ -15,7 +16,8 @@ class App extends React.Component {
           {/* <Route path="/home" element={<Home/>}/> */}
           <Route path="/spotify-app/home" element={<Home/>}/>
         </Routes>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
+      </HashRouter>
     );  
   }
 }
