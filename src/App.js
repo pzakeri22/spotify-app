@@ -7,14 +7,13 @@ import HomepageTest from './HomepageTest';
 class App extends React.Component {     
   render() {
     return (
-      // <BrowserRouter>
-      //   <Routes>
-          <Login/>
-          // <Route path="/" element={<Login/>}></Route>
-           // <Route path="/" element={<HomepageTest/>}></Route>
-      //     <Route path="/home" element={<Home/>}></Route>
-      //   </Routes>
-      // </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+           {/* <Login/> */}
+          <Route path="/" element={<Login/>}/>
+          <Route path="/home" element={<Home/>}/>
+        </Routes>
+      </BrowserRouter>
     );  
   }
 }
