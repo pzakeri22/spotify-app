@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       // <BrowserRouter>
-      <HashRouter>
+      <HashRouter basename="/spotify-app">
         <Routes>
            {/* <Login/> */}
            {/* <Route path="/" element={<Login/>}/> */}
