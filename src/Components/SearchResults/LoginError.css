@@ -22,12 +22,13 @@
   .login-error button {
     display: block;
     text-decoration: none;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1rem;
     border-radius: 50px;
     border: none;
     width: fit-content;
     background-color: purple;
     color: white;
+    font-size: 0.83rem;
   }
 
   .login-error button:hover {

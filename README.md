@@ -10,14 +10,18 @@ This project was created with:
 - Git
 - Github
 - React
+- CSS
+- HTML
 
-## Demo
+## Screenshots
 
-[![jamming-screenshot-2.png](https://i.postimg.cc/DfSMscTr/jamming-screenshot-2.png)](https://postimg.cc/mhGjWChk)
+[![spotifyscreenshot.png](https://i.postimg.cc/wvfbnR57/spotifyscreenshot.png)](https://postimg.cc/WFZnk3Hv)
 *Screenshot of app in use*
 
+## Launch
 
-Due to limits placed by Spotify on the use of their API, this app requires users to be individually authorised to log in, therefore it cannot be accessed publicly. Instead, please watch this demo of the app in use:
+To launch this app, please visit https://spotifyplaylistapp.netlify.app/. 
+Due to limits placed by Spotify on the use of their API for personal projects, you must login with the testing account specified;
 
 https://user-images.githubusercontent.com/92223059/181228044-46546401-f1bf-41bb-a43a-8de867345979.mp4
 

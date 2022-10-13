@@ -12,9 +12,10 @@ class Login extends React.Component {
              <h1>Playlist App</h1>
           </section>
           <section className="main">
-            <h2>Login</h2>
+            <h2>Login Instructions</h2>
             <div className="instructions">
-                <p>Please login using the testing account below.</p>
+                <p>Please login using the account below.
+                </p>
                 <p className="large-screen">
                   Email : &ensp;&ensp;&ensp;&ensp; 
                   <span className="pop">developertesting101@outlook.com</span>
@@ -27,7 +28,8 @@ class Login extends React.Component {
                   <br/>Password :
                   <br/>developer101
                 </p>
-                <p>On the next page, if prompted, you must log out of your current Spotify account first;</p>
+                <p>
+                  On the new window, if prompted, you must log out of your current Spotify account first;</p>
                 <img className="login-example"src={require("../../images/log-in.png")} alt="example"></img>
             </div>
             <a 

@@ -17,7 +17,7 @@ class LoginError extends React.Component {
         if (this.state.hasError) { 
             return (
                 <section className="login-error">
-                    <div className="error"><p>User Access Error - please log in again using the test account;</p> </div>
+                    <div className="error"><p>User Access Error - please log in again using the specified credentials;</p> </div>
                     <Link to="/" style={{textDecoration: 'none'}}>
                     <button>
                         LOGIN TO SPOTIFY

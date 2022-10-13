@@ -27,7 +27,7 @@ class Playlist extends React.Component {
                         required
                     />  
                     <p className={`instructions visible-${saveDisabled}`}>
-                        Add songs to build your playlist.
+                        Add songs to build your playlist, then view your playlists on the web.
                     </p>
                     <Tracklist 
                         tracks={this.props.playlistTracks}
