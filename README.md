@@ -21,7 +21,4 @@ This project was created with:
 ## Launch
 
 To launch this app, please visit https://spotifyplaylistapp.netlify.app/. 
-Due to limits placed by Spotify on the use of their API for personal projects, you must login with the testing account specified;
-
-https://user-images.githubusercontent.com/92223059/181228044-46546401-f1bf-41bb-a43a-8de867345979.mp4
-
+Due to limits placed by Spotify on the use of their API for personal projects, you must login with the testing account specified.
